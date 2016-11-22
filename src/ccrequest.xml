@@ -1,0 +1,6 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.vitality.aiab.com/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ws:cnid>%CCID%</ws:cnid>
+   </soapenv:Body>
+</soapenv:Envelope>

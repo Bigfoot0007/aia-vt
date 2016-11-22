@@ -1,0 +1,11 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+   <soapenv:Body>
+      <rpcOp:hasVlitiyPolicyResponse xmlns:rpcOp="http://impl.webservice.wsdl.ecompass.aig.com/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+         <return xmlns:ns2="http://impl.webservice.wsdl.ecompass.aig.com/">
+            <code>0</code>
+            <message>Yes</message>
+            <entityID>EID111111</entityID>
+         </return>
+      </rpcOp:hasVlitiyPolicyResponse>
+   </soapenv:Body>
+</soapenv:Envelope>

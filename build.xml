@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="AIA-VT-Plugin" default="deploy" basedir="./">
+	<property name="jarfilename" value="com.ibm.aia.fim" />
+	<property name="tdi_lib" value="/opt/IBM/TDI/V7.0/jars/3rdparty/" />
+	<property name="version" value="1.0" />
+	<target name="init">
+		<mkdir dir="${basedir}/release" />
+	</target>
+
+	<target name="deploy" depends="init">
+		<!-- <delete dir="${basedir}/release/"></delete> -->
+
+		<tstamp>
+			<format property="touch.time" pattern="yyyyMMddhhmm" />
+		</tstamp>
+		<echo message="${touch.time}" />
+		<jar destfile="${basedir}/release/${jarfilename}.jar" basedir="${basedir}/bin" update="true">
+			<include name="**/*.class" />
+			<!-- 剔除测试代码 -->
+			<exclude name="**/*Test.class" />
+			<include name="**/*.xml" />
+
+			<manifest>
+				<attribute name="Version" value="${version}" />
+				<attribute name="Built-By" value="LBS CN Security Team. 2016.04.21" />
+				<attribute name="Built-time" value="${touch.time}" />
+			</manifest>
+		</jar>
+		<!--  For Testing. -->
+		<!-- <copy todir="/opt/IBM/WebSphere/AppServer/lib/" verbose="true"> <fileset dir="${basedir}/release/"></fileset> </copy>  -->
+		<!-- <copy todir="${tdi_lib}" verbose="true"> <fileset dir="${basedir}/release/"></fileset> </copy> -->
+		
+		
+		
+	</target>
+</project>

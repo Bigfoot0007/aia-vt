@@ -1,0 +1,8 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:impl="http://impl.webservice.wsdl.ecompass.aig.com/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <impl:hasVlitiyPolicy>
+         <EBid>%EBID%</EBid>
+      </impl:hasVlitiyPolicy>
+   </soapenv:Body>
+</soapenv:Envelope>

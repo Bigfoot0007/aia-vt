@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<soapenv:Body>
+		<VitalityPolicyOutput xmlns="http://ws.vitality.aiab.com/bo/">
+			<returnCd xmlns="">-100000</returnCd>
+			<returnMsg xmlns="">Yes</returnMsg>
+			<EntityID xmlns="">5500766786</EntityID>
+		</VitalityPolicyOutput>
+	</soapenv:Body>
+</soapenv:Envelope>
