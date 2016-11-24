@@ -3,10 +3,9 @@ package com.ibm.aia.fim;
 import java.io.BufferedReader;
 import java.io.DataOutputStream;
 import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.logging.Logger;
-
-import javax.net.ssl.HttpsURLConnection;
 
 /*
  * This class for retrievel the VT Entity ID by ebid.
@@ -44,7 +43,7 @@ public class EB2VT {
 			obj = new URL(ccWSUrl);
 		}
 
-		HttpsURLConnection conn = (HttpsURLConnection) obj.openConnection();
+		HttpURLConnection conn = (HttpURLConnection) obj.openConnection();
 
 		// add reuqest header
 		conn.setRequestMethod("POST");
