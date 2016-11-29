@@ -15,6 +15,7 @@ public class Config {
 	public static String USER_AGENT = "IBM_TFIMBG_6.2.2";
 
 	public static String readTemplatefile(String filename) {
+		
 		InputStream inputStream = Config.class.getClassLoader().getResourceAsStream(filename);
 		String line;
 		StringBuffer buffer = new StringBuffer();
@@ -23,6 +24,7 @@ public class Config {
 			reader = new BufferedReader(new InputStreamReader(inputStream, "UTF-8"));
 			while ((line = reader.readLine()) != null) {
 				buffer.append(line);
+				buffer.append("\n");
 			}
 		} catch (Exception e) {
 			e.printStackTrace();

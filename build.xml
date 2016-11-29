@@ -2,7 +2,7 @@
 <project name="AIA-VT-Plugin" default="deploy" basedir="./">
 	<property name="jarfilename" value="com.ibm.aia.fim" />
 	<property name="tdi_lib" value="/opt/IBM/TDI/V7.0/jars/3rdparty/" />
-	<property name="version" value="1.0" />
+	<property name="version" value="1.0.01" />
 	<target name="init">
 		<mkdir dir="${basedir}/release" />
 	</target>
@@ -17,12 +17,12 @@
 		<jar destfile="${basedir}/release/${jarfilename}.jar" basedir="${basedir}/bin" update="true">
 			<include name="**/*.class" />
 			<!-- 剔除测试代码 -->
-			<exclude name="**/*Test.class" />
+			
 			<include name="**/*.xml" />
 
 			<manifest>
 				<attribute name="Version" value="${version}" />
-				<attribute name="Built-By" value="LBS CN Security Team. 2016.04.21" />
+				<attribute name="Built-By" value="LBS CN Security Team. 2016.11.28" />
 				<attribute name="Built-time" value="${touch.time}" />
 			</manifest>
 		</jar>
